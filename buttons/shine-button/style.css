@@ -1,0 +1,60 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;              
+  background-color: #f0ebf8;  
+  margin: 0;
+}
+
+/* CSS do Componente */
+.btn-hover {
+  position: relative;
+  background-color: #673ab7;
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito de brilho com pseudo-elemento */
+.btn-hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+  transform: skewX(-20deg);
+}
+
+/* Animação do brilho */
+.btn-hover:hover::before {
+  animation: shine 0.8s forwards;
+}
+
+@keyframes shine {
+  from {
+    left: -75%;
+  }
+  to {
+    left: 125%;
+  }
+}
+
+/* Efeitos complementares */
+.btn-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(103, 58, 183, 0.3);
+}
+
+.btn-hover:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 10px rgba(103, 58, 183, 0.2);
+}

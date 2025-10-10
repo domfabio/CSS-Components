@@ -25,7 +25,7 @@ Basta copiar o código e colar no seu projeto.
 ---
 
 ## 📂 Estrutura
-- `botões/` → Botões prontos para uso com HTML + CSS  
+- [Botões](./buttons/) → Botões prontos para uso com HTML + CSS  
 - [Cards](./cards/) → Cards de produto, perfil e testemunho  
 - `footers/` → Rodapés simples  
 - `forms/` → Formulários de login e cadastro  
